@@ -1,6 +1,6 @@
 ### TRYHACKME Nmap Room --- Beginner Write-up
 Platform:Tryhackme\
-Room:https://tryhackme.com/room/furthernmap\ 
+Room:https://tryhackme.com/room/furthernmap .\ 
 level:Beginner\
 Topic: Nmap Cli , NSE scripts ,firewall Evasion\
 Date : 2 Aug 2025\
@@ -15,7 +15,7 @@ Date : 2 Aug 2025\
 Deploy the machine
 
 ## Task 2 -
-Introduction to ports
+Introduction to ports\
 Available Ports to system - 65535
 
 ## Task 3 -
@@ -67,9 +67,9 @@ involves :
 - no response means open|filtered (rarely gets response)
 - response with ICMP means closed or blocked
 
-ICMP Types (Important ones):
-Type	Code	   Meaning
-3	      0-15	   Destination Unreachable (subcodes: host, port, etc.) (either blocked or filtered by firewall)
-5	      1,2	   Redirect (change route)
-11	      0/1	   Time Exceeded (TTL expired)
-13/14	   -	   Timestamp Request/Reply
+ICMP Types (Important ones):\
+Type	Code	   Meaning\
+3	      0-15	   Destination Unreachable (subcodes: host, port, etc.) (either blocked or filtered by firewall)\
+5	      1,2	   Redirect (change route)\
+11	      0/1	   Time Exceeded (TTL expired)\
+13/14	   -	   Timestamp Request/Reply\
