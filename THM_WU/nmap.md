@@ -67,9 +67,26 @@ involves :
 - no response means open|filtered (rarely gets response)
 - response with ICMP means closed or blocked
 
-ICMP Types (Important ones):\
-Type	Code	   Meaning\
-3	      0-15	   Destination Unreachable (subcodes: host, port, etc.) (either blocked or filtered by firewall)\
-5	      1,2	   Redirect (change route)\
-11	      0/1	   Time Exceeded (TTL expired)\
-13/14	   -	   Timestamp Request/Reply\
+### ICMP Types (Important ones)
+
+Type &nbsp;&nbsp;&nbsp;&nbsp; Code &nbsp;&nbsp;&nbsp;&nbsp; Meaning  
+3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0–15 &nbsp;&nbsp;&nbsp;&nbsp; Destination Unreachable (subcodes: host, port, etc.) (either blocked or filtered by firewall)  
+5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1,2 &nbsp;&nbsp;&nbsp;&nbsp; Redirect (change route)  
+11 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0/1 &nbsp;&nbsp;&nbsp;&nbsp; Time Exceeded (TTL expired)  
+13/14 &nbsp;&nbsp;&nbsp;&nbsp; - &nbsp;&nbsp;&nbsp;&nbsp; Timestamp Request/Reply  
+
+## Task 8 (Xmas,FIN,NULL)
+
+- NULL (-sN) -> send no flags sent, and empty packets, expects RST as response for closed port 
+- FIN (-sF) -> it sends FIN packets , expects RST as response for closed port 
+- Xmas (-sX) -> sends FIN,PSH,URG , expects RST as response for closed port 
+
+NOTE: used for unix not supported for windoes ,as windows always returns RST
+
+# Task 9 (ICMP Network Scanning)
+
+its like ping testing for the host and other devices on the network , checking if they are up and skips port scanning
+
+-sn
+
+its like `ping <IP_address>` for multiple devices  
